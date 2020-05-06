@@ -10,3 +10,8 @@ export const fetchPosts = async () => {
 }; 
 //Будет Error: Actions must be plain objects. Use custom middleware for async actions.
 */
+
+export const fetchPosts = () => async dispatch => {
+  const responce = await jsonPlaceholder.get('/posts');
+  dispatch({ type: 'FETCH_POSTS', payload: responce });
+};

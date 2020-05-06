@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import postReducer from './postsReducer';
 
 export default combineReducers({
-  replaceMe: () => 'OK'
+  posts: postReducer
 });
 
 //export default combineReducers({}); - этого достаточно для запуска аппликации, но будет ошибка в консоли
